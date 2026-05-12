@@ -1,0 +1,5 @@
+{
+  "name": "ABNGrid",
+  "description": "ABNGrid - Um gerador de QR Code moderno e altamente customizável com preview em tempo real, suporte a logos e diferentes estilos de pontos e cantos.",
+  "requestFramePermissions": []
+}

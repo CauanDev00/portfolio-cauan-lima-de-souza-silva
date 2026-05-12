@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "User profile and settings",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "lastLogin": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email"]
+    },
+    "QrCode": {
+      "title": "Saved QR Code",
+      "description": "A QR code saved by the user",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "content": { "type": "string" },
+        "settings": { "type": "object" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "imageUrl": { "type": "string", "description": "URL to the generated QR code image in Storage" }
+      },
+      "required": ["userId", "content", "settings"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile documents"
+    },
+    "/users/{userId}/qr_codes/{qrId}": {
+      "schema": "QrCode",
+      "description": "User's saved QR codes"
+    }
+  }
+}
