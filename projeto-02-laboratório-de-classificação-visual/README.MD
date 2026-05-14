@@ -1,118 +1,277 @@
 # 🤖 Viés em IA — Classificação de Tênis Masculino vs Feminino
 
-> Estudo de caso prático sobre como algoritmos de Machine Learning podem desenvolver vieses a partir de dados limitados, utilizando o **Teachable Machine** como ferramenta de experimentação.
+> Estudo de caso prático sobre como algoritmos de **Machine Learning** podem desenvolver vieses a partir de datasets limitados, utilizando o **Teachable Machine** como ferramenta de experimentação e análise de classificação supervisionada.
+
+![Badge](https://img.shields.io/badge/IA-Machine%20Learning-blue)
+![Badge](https://img.shields.io/badge/Modelo-Classificação%20de%20Imagens-green)
+![Badge](https://img.shields.io/badge/Ferramenta-Teachable%20Machine-orange)
+![Badge](https://img.shields.io/badge/Status-Concluído-success)
 
 ---
 
-## 📌 Visão Geral
+# 📌 Visão Geral
 
-Este projeto demonstra, de forma prática, como um modelo de classificação de imagens pode errar ao identificar o gênero de um tênis — e o que isso significa socialmente. O modelo foi treinado com a ferramenta **Teachable Machine (Google)** e testado em tempo real via câmera.
+Este projeto demonstra, de forma prática, como um modelo de classificação de imagens pode apresentar **viés algorítmico** ao identificar o gênero de um tênis utilizando aprendizado supervisionado.
+
+O experimento foi desenvolvido utilizando o **Teachable Machine (Google)** e executado em tempo real através de webcam para avaliar o comportamento do modelo durante o processo de inferência.
+
+O objetivo principal foi analisar como datasets limitados ou pouco diversos impactam diretamente a capacidade de generalização do modelo e sua acurácia.
 
 ---
 
-## ⚙️ Como o Viés Acontece
+# 🧠 Arquitetura do Experimento
 
-### Mecanismo do Viés
+O modelo foi desenvolvido utilizando abordagem de **classificação supervisionada de imagens**.
 
-O viés ocorre quando o algoritmo **aprende com dados limitados ou não representativos**. Durante o treinamento, se o modelo recebe imagens predominantemente de um tipo (ex: tênis brancos como femininos e tênis escuros como masculinos), ele aprende padrões superficiais e incorretos.
+O conjunto de treinamento foi dividido em duas classes principais:
 
+- `tenis homen`
+- `tenis mulher`
+
+Cada classe recebeu imagens rotuladas manualmente (**labels**) para permitir que o modelo aprendesse padrões visuais durante o treinamento.
+
+A etapa de inferência foi realizada em tempo real utilizando webcam, permitindo avaliar:
+
+- generalização do modelo
+- reconhecimento em diferentes ângulos
+- comportamento sob variações de iluminação
+- impacto de fundos complexos
+
+---
+
+# ⚙️ Como o Viés Acontece
+
+## 🔍 Mecanismo do Viés
+
+O viés ocorre quando o algoritmo aprende padrões superficiais presentes em datasets limitados ou desbalanceados.
+
+Durante o treinamento, o modelo recebeu exemplos predominantemente associados a determinadas características visuais.
+
+Exemplo:
+
+- tênis claros → `tenis mulher`
+- tênis escuros → `tenis homen`
+
+Com isso, o modelo passou a utilizar atributos irrelevantes como principal fator de decisão.
+
+```txt
+Dataset limitado
+        ↓
+Aprendizado de padrões incorretos
+        ↓
+Inferência enviesada
+        ↓
+Classificação errada
 ```
-Dado limitado → Padrão incorreto aprendido → Classificação errada
-```
-
-**Exemplo real registrado:**
-> Um tênis masculino foi classificado com **100% de confiança** como `tenis mulher` pelo modelo treinado.
 
 ---
 
-## ⚠️ Consequência Social
+# 📊 Métricas Observadas
 
-Esse tipo de erro vai além de uma simples falha técnica:
+Durante os testes práticos, o modelo apresentou alta confiança em classificações incorretas.
+
+## Resultados observados:
+
+- ✔ 100% de confiança em classificação errada
+- ✔ baixa capacidade de generalização
+- ✔ sensibilidade elevada a cores e iluminação
+- ✔ dificuldade em cenários fora do conjunto de treinamento
+
+O experimento demonstrou que:
+
+> **Alta confiança do modelo não representa necessariamente alta acurácia.**
+
+---
+
+# 🧹 Sanitização de Dados
+
+Foi realizada uma curadoria parcial do dataset para reduzir ruídos visuais e minimizar enviesamentos durante o treinamento.
+
+Entretanto, devido à baixa diversidade do conjunto de treinamento, o modelo apresentou dificuldades em cenários com:
+
+- fundos complexos
+- iluminação inconsistente
+- ângulos diferentes
+- cores semelhantes entre classes
+- objetos parcialmente ocultos
+
+Esses fatores impactaram diretamente a acurácia durante o processo de inferência.
+
+---
+
+# ⚠️ Consequência Social
+
+O erro apresentado pelo modelo vai além de uma simples falha técnica.
+
+Sistemas enviesados podem gerar impactos sociais relevantes.
 
 | Impacto | Descrição |
 |---|---|
-| Classificação injusta | Produtos, perfis ou recomendações atribuídos de forma incorreta |
-| Constrangimento | Pessoas podem ser mal identificadas em sistemas automatizados |
-| Exclusão | Grupos sub-representados nos dados tendem a ser mais prejudicados |
-| Reforço de estereótipos | O modelo aprende e perpetua padrões sociais enviesados |
+| Classificação injusta | Produtos ou perfis atribuídos incorretamente |
+| Constrangimento | Usuários podem ser mal identificados |
+| Exclusão | Grupos sub-representados tendem a sofrer mais erros |
+| Reforço de estereótipos | O modelo perpetua padrões sociais enviesados |
 
-> **O algoritmo não é neutro — ele reflete os dados com os quais foi alimentado.**
+> **O algoritmo não é neutro — ele reproduz os padrões presentes nos dados utilizados no treinamento.**
 
 ---
 
-## 🛠️ Ferramenta Utilizada
+# 🛠️ Ferramenta Utilizada
 
-### Teachable Machine (Google)
+## Teachable Machine (Google)
 
 | Item | Detalhe |
 |---|---|
-| Plataforma | [teachablemachine.withgoogle.com](https://teachablemachine.withgoogle.com) |
+| Plataforma | https://teachablemachine.withgoogle.com |
 | Tipo de modelo | Classificação de imagens |
-| Input | Câmera em tempo real (Webcam) |
+| Técnica | Aprendizado supervisionado |
+| Input | Webcam em tempo real |
+| Dataset | Imagens rotuladas manualmente |
 | Classes treinadas | `tenis homen` / `tenis mulher` |
-| Output observado | 100% `tenis mulher` para um tênis masculino |
+| Processo analisado | Inferência em tempo real |
 
 ---
 
-## 🧪 Resultado do Experimento
+# 🧪 Resultado do Experimento
 
-```
-Input:   Foto de tênis masculino (capturada ao vivo)
+```txt
+Input: Foto de tênis masculino (capturada ao vivo)
+
 Output:
-  tenis homen  ░░░░░░░░░░░░░░░░  0%
-  tenis mulher ████████████████  100%  ← ERRO
+
+tenis homen   ░░░░░░░░░░░░░░░░  0%
+tenis mulher  ████████████████ 100%  ← ERRO
 ```
 
-O modelo demonstrou **confiança total em uma classificação incorreta**, evidenciando que alta confiança não significa alta precisão quando os dados de treino são enviesados.
+O modelo apresentou confiança total em uma classificação incorreta, evidenciando limitação na capacidade de generalização do dataset utilizado.
 
 ---
 
-## ✅ Ação Mitigadora — Human-in-the-loop
+# 🖼 Evidências Visuais
 
-A principal estratégia para reduzir esse tipo de viés é manter um **humano no processo de revisão**, especialmente antes e durante o treinamento do modelo.
+## Figura 1 — Modelo realizando inferência em tempo real
 
-### O que é Human-in-the-loop?
+![Figura 1](./assets/modelo-classificando.png)
 
-É uma abordagem em que pessoas revisam, validam e corrigem os dados e as decisões do modelo em pontos críticos do pipeline de IA.
+---
 
-### Como aplicar neste caso:
+## Figura 2 — Matriz de confusão ou resultados dos testes
 
+![Figura 2](./assets/matriz-confusao.png)
+
+---
+
+# ✅ Estratégia Mitigadora — Human-in-the-loop
+
+A principal estratégia para redução de vieses é manter revisão humana contínua durante o desenvolvimento do modelo.
+
+## 🔍 O que é Human-in-the-loop?
+
+Abordagem em que pessoas participam ativamente da validação, revisão e correção dos dados e decisões da IA.
+
+---
+
+## ✔ Aplicação prática no experimento
+
+```txt
+1. Revisão do conjunto de treinamento
+        ↓
+2. Balanceamento das classes
+        ↓
+3. Inclusão de imagens mais diversas
+        ↓
+4. Testes em cenários variados
+        ↓
+5. Monitoramento contínuo do modelo
+        ↓
+6. Re-treinamento com dados corrigidos
 ```
-1. Revisar os dados de treinamento antes de alimentar o modelo
-        ↓
-2. Garantir diversidade de imagens (cores, marcas, ângulos, contextos)
-        ↓
-3. Balancear o número de amostras por classe
-        ↓
-4. Testar o modelo com casos variados antes de publicar
-        ↓
-5. Monitorar erros em produção e re-treinar com dados corrigidos
-```
 
 ---
 
-## 💡 Lições Aprendidas
+# 💡 Lições Aprendidas
 
-### 1. Dados definem o comportamento do modelo
-> Um modelo só é tão bom quanto os dados com os quais foi treinado. Diversidade nos dados é qualidade no resultado.
+## 1️⃣ Dados definem o comportamento do modelo
 
-### 2. Alta confiança ≠ alta precisão
-> O modelo indicou 100% de certeza em uma resposta errada. Isso mostra que métricas de confiança isoladas podem enganar.
-
-### 3. Viés é um problema de design, não só de algoritmo
-> A origem do viés está nas escolhas humanas sobre quais dados coletar e como rotulá-los.
-
-### 4. Human-in-the-loop é essencial em sistemas críticos
-> Revisão humana contínua é a principal defesa contra vieses que impactam pessoas reais.
+> Um modelo é limitado pela qualidade e diversidade do dataset utilizado durante o treinamento.
 
 ---
 
-## 🔗 Referências
+## 2️⃣ Alta confiança ≠ alta precisão
 
-- [Teachable Machine — Google](https://teachablemachine.withgoogle.com)
-- [AI Fairness 360 — IBM](https://aif360.mybluemix.net/)
-- [Algorithmic Bias — MIT Media Lab](https://www.media.mit.edu/projects/algorithmic-bias/overview/)
+> O modelo apresentou 100% de confiança em uma resposta incorreta, demonstrando que confiança isolada não representa qualidade da inferência.
 
 ---
 
-*Estudo de Caso · Viés em IA · Machine Learning · Human-in-the-loop*
+## 3️⃣ Viés é um problema de design
+
+> O viés surge das escolhas humanas relacionadas à coleta, rotulagem e balanceamento dos dados.
+
+---
+
+## 4️⃣ Sanitização de dados é essencial
+
+> A curadoria do dataset reduz ruídos e melhora significativamente a capacidade de generalização do modelo.
+
+---
+
+## 5️⃣ Human-in-the-loop reduz falhas críticas
+
+> Revisão humana contínua é uma das principais estratégias para reduzir vieses em sistemas de IA.
+
+---
+
+# ⚙️ Como Executar o Projeto
+
+## Pré-requisitos
+
+- Google Chrome
+- Webcam
+- Conta Google
+- Acesso ao Teachable Machine
+
+---
+
+## Passos para Reproduzir
+
+1. Acesse o Teachable Machine
+2. Crie um projeto de classificação de imagens
+3. Adicione duas classes:
+   - `tenis homen`
+   - `tenis mulher`
+4. Capture imagens utilizando webcam
+5. Treine o modelo
+6. Execute a inferência em tempo real
+7. Teste imagens diferentes das utilizadas no treinamento
+
+---
+
+# 🚀 Tecnologias Utilizadas
+
+- Teachable Machine
+- Machine Learning
+- Classificação Supervisionada
+- Webcam Input
+- Inteligência Artificial
+- Markdown
+- GitHub
+
+---
+
+# 🔗 Referências
+
+- https://teachablemachine.withgoogle.com
+- https://aif360.mybluemix.net
+- https://www.media.mit.edu/projects/algorithmic-bias/overview/
+
+---
+
+# 👨‍💻 Autor
+
+Desenvolvido por **Cauan Lima de Souza Silva**
+
+---
+
+# 🔗 Navegação
+
+[Voltar ao início](https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva)
