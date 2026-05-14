@@ -1,182 +1,345 @@
 <div align="center">
 
-# ⬛ Qr Code Styling
+# ⬛ Projeto 04 — IA Generativa com Copilot e OpenAI
 
 **Gerador de QR Code moderno e altamente customizável**
-com preview em tempo real, suporte a logos e diferentes estilos de pontos e cantos.
+com preview em tempo real, integração com IA generativa e armazenamento em nuvem.
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-12-FFCA28?logo=firebase&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/TailwindCSS-4-06B6D4?logo=tailwindcss&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o-412991?logo=openai&logoColor=white)
+![Copilot](https://img.shields.io/badge/GitHub-Copilot-black?logo=githubcopilot&logoColor=white)
+![Gemini](https://img.shields.io/badge/Google-Gemini-4285F4?logo=google&logoColor=white)
 
 </div>
 
 ---
 
-## 📌 Sobre o Projeto
+# 🔗 Repositório do Projeto
 
-**ABNGrid** é uma aplicação web construída com React + TypeScript que permite gerar QR Codes personalizados com preview em tempo real. O usuário pode customizar cores, estilos de pontos, cantos, inserir logos e salvar seus QR Codes na nuvem via Firebase.
+Acesse o projeto completo:
 
-Desenvolvido e hospedado no **Google AI Studio** com integração à API **Gemini**.
-
-🔗 [Ver no AI Studio](https://ai.studio/apps/047ceef1-bd45-4354-916f-fa00c471cbbd)
+[Projeto 04 — IA Generativa com Copilot e OpenAI](https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva/tree/main/projeto-04-ia-generativa-com-copilot-e-openai)
 
 ---
 
-## ✨ Funcionalidades
+# 📌 Sobre o Projeto
 
-- 🎨 Customização completa de estilo (pontos, cantos, cores)
-- 🖼️ Suporte a logo centralizado no QR Code
-- 👁️ Preview em tempo real durante a edição
-- 💾 Salvar QR Codes na conta do usuário (Firebase Firestore)
-- 🔐 Autenticação via Firebase Auth
-- ☁️ Armazenamento de imagens via Firebase Storage
-- 🤖 Integração com Gemini AI (`@google/genai`)
+O **ABNGrid** é uma aplicação web desenvolvida com **React + TypeScript** voltada para geração avançada de QR Codes personalizados.
+
+O projeto utiliza conceitos de **IA Generativa**, integração com APIs modernas e técnicas de **Prompt Engineering** para acelerar desenvolvimento, geração de componentes e automação de tarefas de front-end.
+
+A aplicação permite:
+
+- geração dinâmica de QR Codes
+- customização visual avançada
+- preview em tempo real
+- autenticação de usuários
+- armazenamento em nuvem
+- integração com IA para auxílio no desenvolvimento
 
 ---
 
-## 🚀 Rodando Localmente
+# 🧠 Estratégia de IA Generativa Utilizada
 
-### Pré-requisitos
+O desenvolvimento utilizou ferramentas de IA como:
 
-- [Node.js](https://nodejs.org/) (versão 18+)
-- Conta no [Firebase](https://firebase.google.com/)
-- Chave de API do [Gemini](https://aistudio.google.com/app/apikey)
+- **GitHub Copilot**
+- **OpenAI**
+- **Gemini AI**
 
-### Instalação
+A estratégia aplicada envolveu diferentes abordagens de Prompt Engineering para geração de código e otimização de componentes React.
 
-```bash
-# 1. Clone o repositório
-git clone <seu-repositorio>
-cd abngrid
+---
 
-# 2. Instale as dependências
-npm install
+# ⚙️ Técnicas de Prompt Engineering Aplicadas
 
-# 3. Configure as variáveis de ambiente
-cp .env.example .env.local
+## 🔹 Zero-Shot Prompting
+
+Utilizado para gerar componentes simples sem exemplos prévios.
+
+### Exemplo:
+
+```txt
+Crie um componente React responsivo para customização de QR Code
+utilizando TailwindCSS e TypeScript.
 ```
 
-### Variáveis de Ambiente
+### Resultado
 
-Edite o arquivo `.env.local` com suas credenciais:
+- geração rápida de componentes
+- redução do tempo de desenvolvimento
+- código inicial funcional
+
+---
+
+## 🔹 Few-Shot Prompting
+
+Aplicado para manter padronização visual e estrutural entre componentes.
+
+A IA recebeu exemplos prévios da arquitetura utilizada antes de gerar novos elementos.
+
+### Benefícios observados
+
+- maior consistência visual
+- redução de retrabalho
+- melhor reutilização de padrões
+
+---
+
+## 🔹 Context Window
+
+Os modelos foram utilizados considerando limite de contexto para preservar:
+
+- coerência estrutural
+- padronização do código
+- reutilização de componentes
+- continuidade semântica
+
+---
+
+## 🔹 Controle de Temperatura
+
+Prompts foram adaptados para diferentes níveis de criatividade.
+
+### Temperatura baixa
+
+Utilizada para:
+
+- geração previsível
+- código técnico
+- componentes críticos
+
+### Temperatura alta
+
+Utilizada para:
+
+- criatividade visual
+- sugestões de UI/UX
+- experimentação estética
+
+---
+
+# 📊 Resultados Obtidos
+
+## Métricas observadas durante o desenvolvimento
+
+- ✔ **Redução aproximada de 50% no tempo de criação de componentes**
+- ✔ **Aumento da produtividade no front-end**
+- ✔ **Menor incidência de erros repetitivos**
+- ✔ **Maior velocidade na prototipagem**
+- ✔ **Melhoria na consistência visual**
+
+---
+
+# 🖼 Evidência Visual
+
+## Figura 1 — Prompt utilizado e resposta gerada pela IA
+
+![Figura 1](./assets/prompt-openai-copilot.png)
+
+---
+
+# ✨ Funcionalidades
+
+- 🎨 Customização completa de QR Code
+- 🖼️ Upload de logo personalizada
+- 👁️ Preview em tempo real
+- 💾 Salvamento em nuvem
+- 🔐 Autenticação via Firebase
+- ☁️ Upload de imagens no Firebase Storage
+- 🤖 Integração com IA generativa
+- 📱 Interface responsiva
+- ⚡ Atualização dinâmica instantânea
+
+---
+
+# 🚀 Arquitetura Tecnológica
+
+| Categoria | Tecnologia |
+|---|---|
+| Front-end | React 19 |
+| Linguagem | TypeScript |
+| Build Tool | Vite |
+| Estilização | TailwindCSS |
+| Backend | Firebase |
+| IA Generativa | OpenAI / Gemini |
+| Assistente IA | GitHub Copilot |
+| Gerador QR | qr-code-styling |
+| Estado Global | Zustand |
+
+---
+
+# 🏗️ Estrutura do Projeto
+
+```txt
+abngrid/
+├── src/
+│   ├── components/
+│   ├── hooks/
+│   ├── services/
+│   ├── stores/
+│   └── main.tsx
+│
+├── firestore.rules
+├── firebase.json
+├── vite.config.ts
+├── package.json
+├── .env.example
+└── README.md
+```
+
+---
+
+# 🔒 Segurança
+
+O projeto utiliza práticas de segurança voltadas para aplicações com integração em nuvem.
+
+## Medidas implementadas
+
+- isolamento de usuários no Firestore
+- autenticação via Firebase Auth
+- proteção de variáveis sensíveis
+- uso de `.env.local`
+- separação entre ambiente local e produção
+
+---
+
+# ⚠️ Uso Seguro de API Keys
+
+As chaves de API não devem ser expostas em repositórios públicos.
+
+O projeto utiliza variáveis de ambiente para proteger credenciais sensíveis.
+
+---
+
+# 📁 Arquivo `.env.local`
 
 ```env
-# Obrigatória — chave da API Gemini
+OPENAI_API_KEY="sua_chave_aqui"
 GEMINI_API_KEY="sua_chave_aqui"
-
-# URL da aplicação (preenchida automaticamente no AI Studio)
 APP_URL="http://localhost:3000"
 ```
 
-### Executar
+> ⚠️ Nunca publique suas chaves reais no GitHub.
+
+---
+
+# ⚙️ Como Executar o Projeto
+
+## Pré-requisitos
+
+- Node.js 18+
+- Conta Firebase
+- Chave OpenAI
+- Chave Gemini
+- Git instalado
+
+---
+
+## 1️⃣ Clonar o repositório
+
+```bash
+git clone https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva
+```
+
+---
+
+## 2️⃣ Entrar na pasta do projeto
+
+```bash
+cd projeto-04-ia-generativa-com-copilot-e-openai
+```
+
+---
+
+## 3️⃣ Instalar dependências
+
+```bash
+npm install
+```
+
+---
+
+## 4️⃣ Configurar variáveis de ambiente
+
+```bash
+cp .env.example .env.local
+```
+
+---
+
+## 5️⃣ Inserir suas chaves de API
+
+Configure:
+
+- OPENAI_API_KEY
+- GEMINI_API_KEY
+
+---
+
+## 6️⃣ Executar aplicação
 
 ```bash
 npm run dev
-# Aplicação disponível em http://localhost:3000
+```
+
+Aplicação disponível em:
+
+```txt
+http://localhost:3000
 ```
 
 ---
 
-## 🏗️ Stack Tecnológica
-
-| Categoria | Tecnologia | Versão |
-|---|---|---|
-| UI | React | 19 |
-| Linguagem | TypeScript | 5.8 |
-| Build | Vite | 6 |
-| Estilo | Tailwind CSS | 4 |
-| Animações | Motion | 12 |
-| Ícones | Lucide React | 0.546 |
-| QR Code | qr-code-styling | 1.9 |
-| Estado global | Zustand | 5 |
-| Backend | Firebase | 12 |
-| IA | @google/genai | 1.29 |
-
----
-
-## 🗄️ Estrutura do Banco de Dados (Firestore)
-
-```
-firestore/
-├── users/
-│   └── {userId}/               ← Perfil do usuário
-│       ├── uid
-│       ├── email
-│       ├── displayName
-│       ├── photoURL
-│       ├── createdAt
-│       ├── lastLogin
-│       └── qr_codes/
-│           └── {qrId}/         ← QR Code salvo
-│               ├── id
-│               ├── userId
-│               ├── name
-│               ├── content
-│               ├── settings    ← Objeto com estilos do QR
-│               ├── createdAt
-│               └── imageUrl    ← URL no Firebase Storage
-```
-
-### Regras de Segurança
-
-- Cada usuário **só acessa seus próprios dados** (`isOwner`)
-- Validação de campos obrigatórios no Firestore Rules
-- Conteúdo do QR limitado a **2048 caracteres**
-- Nome do QR limitado a **100 caracteres**
-- Perfis de usuário **não podem ser deletados**
-- QR Codes podem ser criados, lidos, atualizados e deletados pelo dono
-
----
-
-## 📁 Estrutura do Projeto
-
-```
-abngrid/
-├── src/
-│   └── main.tsx              ← Entrada da aplicação
-├── index.html                ← HTML base
-├── vite.config.ts            ← Configuração do Vite + aliases
-├── tsconfig.json             ← Configuração TypeScript
-├── package.json              ← Dependências e scripts
-├── firestore.rules           ← Regras de segurança Firestore
-├── firebase-blueprint.json   ← Schema das entidades Firebase
-├── firebase-applet-config.json ← Configuração do projeto Firebase
-├── metadata.json             ← Metadados do app (AI Studio)
-├── .env.example              ← Exemplo de variáveis de ambiente
-└── .gitignore
-```
-
----
-
-## 🔧 Scripts Disponíveis
+# 🔧 Scripts Disponíveis
 
 ```bash
-npm run dev       # Servidor de desenvolvimento (porta 3000)
-npm run build     # Build de produção
-npm run preview   # Preview do build
-npm run lint      # Verificação de tipos TypeScript
-npm run clean     # Remove a pasta dist
+npm run dev
+npm run build
+npm run preview
+npm run lint
+npm run clean
 ```
 
 ---
 
-## 🔒 Segurança
+# 🧪 Comparação entre Modelos Utilizados
 
-- Chaves de API nunca devem ser comitadas — use `.env.local` (já incluído no `.gitignore`)
-- As regras do Firestore garantem isolamento total entre usuários
-- O `firebase-applet-config.json` contém configurações públicas do Firebase (sem dados sensíveis de servidor)
-
-> ⚠️ **Nunca exponha** sua `GEMINI_API_KEY` em repositórios públicos.
-
----
-
-## 📄 Licença
-
-Este projeto foi gerado e hospedado via **Google AI Studio**.
+| Modelo | Uso Principal | Motivo |
+|---|---|---|
+| OpenAI GPT-4o | Geração técnica de código | Melhor coerência estrutural |
+| GitHub Copilot | Autocomplete e produtividade | Velocidade no desenvolvimento |
+| Gemini AI | Experimentação criativa | Sugestões visuais e ideação |
 
 ---
 
-*ABNGrid · QR Code Generator · React + Firebase + Gemini AI*
+# 💡 Aprendizados Obtidos
+
+- IA acelera significativamente desenvolvimento front-end
+- Prompt Engineering impacta diretamente qualidade do código
+- Context window influencia coerência estrutural
+- Temperatura altera previsibilidade das respostas
+- Few-shot prompting melhora consistência visual
+- Copilot aumenta produtividade em tarefas repetitivas
+
+---
+
+# 📄 Licença
+
+Projeto desenvolvido para fins acadêmicos e experimentação em IA Generativa.
+
+---
+
+# 👨‍💻 Autor
+
+Desenvolvido por **Cauan Lima de Souza Silva**
+
+---
+
+# 🔗 Navegação
+
+[Voltar ao início](https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva)
