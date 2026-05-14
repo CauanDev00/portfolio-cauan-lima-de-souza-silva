@@ -1,3 +1,11 @@
+# 🔗 Repositório do Projeto
+
+Acesse o projeto completo no GitHub:
+
+[Projeto 01 - A Corrida de Prompt](https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva/tree/main/projeto-01-a-corrida-de-prompt)
+
+---
+
 # 🎯 Projeto 01 — Engenharia de Prompt com IA Generativa
 
 > Análise sistemática de **Prompt Engineering** aplicada à geração de texto e imagem utilizando o modelo **Qwen AI**, explorando estratégias avançadas de refinamento iterativo, controle contextual e direcionamento semântico.
