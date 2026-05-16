@@ -130,6 +130,3 @@ Também foi observado que prompts mais específicos reduzem significativamente r
 # 🔗 Navegação
 
 [Voltar ao início](https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva)
-# 🔗 Navegação
-
-[Voltar ao início](https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva)
