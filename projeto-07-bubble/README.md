@@ -120,4 +120,4 @@ O Bubble retém o código-fonte, o que representa um risco de **Vendor Lock-in**
 
 ---
 
-Desenvolvido por [Ana Julia Oliveira de Freitas](https://github.com/1Naju)
+Desenvolvido por [cauan lima de souza silva](https://github.com/CauanDev00)
