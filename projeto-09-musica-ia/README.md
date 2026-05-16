@@ -69,4 +69,5 @@ O Suno AI opera com parâmetros equivalentes ao **Temperature** e **Top-p** usad
 
 ---
 
-Desenvolvido por [Ana Julia Oliveira de Freitas](https://github.com/1Naju)
+Desenvolvido por [cauan lima de souza silva](https://github.com/CauanDev00)
+
