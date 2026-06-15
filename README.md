@@ -46,12 +46,14 @@ Atualmente cursando o 2º semestre de Análise e Desenvolvimento de Sistemas na 
 #### 🤖 Inteligência Artificial
 | Projeto | Descrição | Link |
 | :--- | :--- | :---: |
-| **Criação de Imagem com IA** | Análise e refinamento de uma imagem gerada com IA até alcançar um resultado satisfatório. | [Ver Projeto](https://github.com/CauanDev00/portfolio/blob/main/Crian%C3%A7%C3%A3o%20de%20imagen%20usando%20ia/Cria%C3%A7%C3%A3o%20de%20imagen%20usando%20ia.pdf) |
-| **Classificador de Tênis com IA** | Projeto que utiliza IA para identificar se um tênis é masculino ou feminino a partir de análise de características visuais. | [Ver Projeto](https://github.com/CauanDev00/portfolio/blob/main/site%20para%20analisar%20se%20o%20tenis%20%C3%A9%20%20f%20ou%20m/site%20para%20analisar%20se%20o%20tenis%20%C3%A9%20%20f%20ou%20m.pdf) |
-| **Batalha de Modelos de IA** | Comparação entre diferentes modelos de IA aplicados no desenvolvimento de um site, avaliando desempenho e resultados. | [Ver Projeto](https://github.com/CauanDev00/portfolio/blob/main/Batalha_de_Modelos/Batalha_de_Modelos.pdf) |
-| **ABNgrid** | Recriação de um site com um toque de personalidade própria, explorando design e estrutura frontend. | [Ver Projeto](https://github.com/CauanDev00/portfolio/tree/main/abngrid) |
-| **Engenharia Reversa de QR Code** | Análise e reconstrução de um site de geração de QR Code utilizando engenharia reversa para entender sua estrutura e funcionamento. | [Ver Projeto](https://github.com/CauanDev00/portfolio/tree/main/Engenharia%20Reversa) |
-
+| **projeto-01-a-corrida-de-prompt** | Análise e refinamento de uma imagem gerada com IA até alcançar um resultado satisfatório. | [Ver Projeto](https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva/tree/main/projeto-01-a-corrida-de-prompt) |
+| **projeto-02-laboratório-de-classificação-visual** | Projeto que utiliza IA para identificar se um tênis é masculino ou feminino a partir de análise de características visuais. | [Ver Projeto]([https://github.com/CauanDev00/portfolio/blob/main/site%20para%20analisar%20se%20o%20tenis%20%C3%A9%20%20f%20ou%20m/site%20para%20analisar%20se%20o%20tenis%20%C3%A9%20%20f%20ou%20m.pdf](https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva/tree/main/projeto-02-laborat%C3%B3rio-de-classifica%C3%A7%C3%A3o-visual)) |
+| **projeto-03-batalha-de-modelos** | Comparação entre diferentes modelos de IA aplicados no desenvolvimento de um site, avaliando desempenho e resultados. | [Ver Projeto](https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva/tree/main/projeto-03-batalha-de-modelos) |
+| **projeto-04-vibe-coding** | Recriação de um site com um toque de personalidade própria, explorando design e estrutura frontend. | [Ver Projeto](http://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva/tree/main/projeto-04-vibe-coding) |
+| **projeto-05-produto-firebase** | Análise e reconstrução de um site de geração de QR Code utilizando engenharia reversa para entender sua estrutura e funcionamento. | [Ver Projeto]([https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva/tree/main/projeto-05-produto-firebase) |
+| **projeto-07-bubble** | Criação de sistema ultilizando o bubble. | [Ver Projeto]([https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva/tree/main/projeto-07-bubble) |
+| **projeto-08-capitulo-aberto** | Objetivo de integrar a Manus AI com o framework open-source Jitsi Meet para criar um aplicativo Android funcional e criativo. | [Ver Projeto]([[https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva/tree/main/projeto-07-bubble](https://github.com/CauanDev00/portfolio-cauan-lima-de-souza-silva/tree/main/projeto-08-capitulo-aberto)) |
+| **projeto-09-musica-ia** | Composição Generativa com Gemini e Suno. | [Ver ProjetoComposição Generativa com Gemini e Suno) |
 ---
 
 ### 🏗 Estrutura do Repositório
